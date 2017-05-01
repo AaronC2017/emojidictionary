@@ -39,6 +39,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     //Once someone taps something do something, moveSeque is same id as segue between tableview and emoji content page
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let singularEmoji = emojis[indexPath.row]
         performSegue(withIdentifier: "moveSegue", sender: singularEmoji)
     }
